@@ -2,39 +2,42 @@ import styled from "styled-components";
 
 export const Header = styled.header`
   grid-row: header;
-  grid-column: span 14;
-  /* border: 1px solid red; */
+  grid-column: 1 / -1;
+
+  border: 1px solid red;
   height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
+  img {
+    grid-column: span 5;
+  }
   h1 {
     font-size: 27px;
     font-weight: 600;
   }
 `;
-
+export const HeigthSection = styled.div`
+  height: 440px !important;
+`;
 export const Footer = styled.footer`
   grid-row: footer;
-  grid-column: span 14;
-  /* border: 1px solid red; */
+  grid-column: 1 / -1;
+
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   h1 {
     font-size: 27px;
     font-weight: 600;
   }
 `;
-export const Sobre = styled.div`
+export const Sobre = styled(HeigthSection)`
   grid-row: Sobre;
-  grid-column: span 7;
-  /* border: 1px solid red; */
+  grid-column-start: 8;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -61,21 +64,31 @@ export const Sobre = styled.div`
     display: flex;
     flex-direction: row;
   }
+  @media (max-width: 800px) {
+    grid-column: 1 / -1;
+    height: auto !important ;
+  }
 `;
-export const ContainerImg = styled.div`
+export const ContainerImg = styled(HeigthSection)`
   grid-row: Sobre;
-  grid-column: span 7;
-  /* border: 1px solid red; */
   height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  grid-column-start: 6;
+
+  @media (max-width: 800px) {
+    grid-row: SobreImg;
+    grid-column: 1 / -1;
+    height: auto !important;
+  }
 `;
 export const Resumo = styled.div`
   grid-row: resumo;
-  grid-column: span 14;
-  /* border: 1px solid red; */
+  grid-column: 1 / -1;
+  /* border: 1px solid; */
+  background: #121212;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -90,12 +103,16 @@ export const Resumo = styled.div`
     font-size: 1.1rem;
     text-align: center;
     line-height: 180%;
+    @media (max-width: 800px)  {
+      width: 98%;
+      font-size: 0.8rem;
+    }
   }
 `;
 export const Habilidades = styled.div`
   grid-row: habilidades;
-  grid-column: span 14;
-  /* border: 1px solid red; */
+  grid-column: 1 / -1;
+  /* border: 1px solid; */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -113,14 +130,11 @@ export const Habilidades = styled.div`
     justify-content: center;
     gap: 2rem;
   }
-  /* h1{
-    margin-top: 30px;
-  } */
 `;
 export const Projetos = styled.div`
   grid-row: projetos;
-  grid-column: span 14;
-  /* border: 1px solid red; */
+  grid-column: 1 / -1;
+  /* border: 1px solid; */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -150,7 +164,7 @@ export const ButtonContato = styled(Btn)`
 `;
 export const Cards = styled.div`
   text-align: center;
-  background-color: #212121;
+  background-color: #4b4b4b;
   position: relative;
   width: 7rem;
   aspect-ratio: 1;
@@ -162,10 +176,15 @@ export const Cards = styled.div`
   align-items: center;
   cursor: pointer;
   transition: 0.2s;
+  filter: grayscale(1);
+
+  :hover {
+    filter: none;
+  }
   h1 {
     font-size: 1rem;
     font-weight: 600;
-    color: #c69f25;
+    color: #e6bb17;
     margin-bottom: 1rem;
   }
   ::after {
@@ -189,10 +208,12 @@ export const Contatos = styled.div`
     margin: 8px;
     flex-direction: column;
     align-items: center;
-    background: #c69f25;
+    background: #c9c9c9;
     cursor: pointer;
     :hover {
       /* filter: sepia(100%);  */
     }
   }
 `;
+
+export const CardsProjetos = styled.div``;

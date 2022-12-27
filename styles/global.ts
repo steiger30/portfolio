@@ -27,12 +27,13 @@ export default createGlobalStyle`
     font-family: 'DM Sans', sans-serif;
   }
 #main{
-  display: grid;
+    display: grid;
     grid-column-gap: 2rem;
-    grid-row-gap: 1rem;
+    grid-row-gap: 4rem;
     grid-template-columns: repeat(14, 1fr);
-    grid-template-rows: [header] 100px [Sobre] auto [resumo] 300px [habilidades] auto [projetos] 400px [footer] 300px;
-    
+    grid-template-rows: [header] 100px [SobreImg] auto [Sobre] auto [resumo] 300px [habilidades] auto [projetos] 400px [footer] 300px;
+
+    @media (max-width: 950px) {  grid-template-columns: repeat(8, 5fr); }
   }
   #title-section{
     font-size: 30px;
@@ -41,5 +42,7 @@ export default createGlobalStyle`
     margin-bottom: 20px;
   }
 
-
+  body{
+    margin: 0 !important;
+  }
 `;
