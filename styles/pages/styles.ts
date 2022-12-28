@@ -24,7 +24,6 @@ export const HeigthSection = styled.div`
 export const Footer = styled.footer`
   grid-row: footer;
   grid-column: 1 / -1;
-
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -35,17 +34,24 @@ export const Footer = styled.footer`
     font-weight: 600;
   }
 `;
-export const Sobre = styled(HeigthSection)`
+export const Sobre = styled.div`
   grid-row: Sobre;
-  grid-column-start: 8;
+  grid-column-start: 6;
+  grid-column-end: 12;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  @media (max-width: 999px) {
+    grid-column-start: 3;
+   /* / grid-column-end: 12; */
+    h1 {
+      font-size: 40px !important;
+    }
+  }
   h1 {
-    font-size: 42px;
+    font-size: 58px;
     font-weight: 500;
   }
   p {
@@ -69,14 +75,14 @@ export const Sobre = styled(HeigthSection)`
     height: auto !important ;
   }
 `;
-export const ContainerImg = styled(HeigthSection)`
+export const ContainerImg = styled.div`
   grid-row: Sobre;
   height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  grid-column-start: 6;
+  grid-column-start: 4;
 
   @media (max-width: 800px) {
     grid-row: SobreImg;
@@ -103,7 +109,7 @@ export const Resumo = styled.div`
     font-size: 1.1rem;
     text-align: center;
     line-height: 180%;
-    @media (max-width: 800px)  {
+    @media (max-width: 800px) {
       width: 98%;
       font-size: 0.8rem;
     }
@@ -216,4 +222,43 @@ export const Contatos = styled.div`
   }
 `;
 
-export const CardsProjetos = styled.div``;
+export const CardsProjetos = styled.div`
+  border-radius: 28px;
+  width: 300px;
+  background-color: #121212;
+  /* border: 1px solid; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  div {
+    padding: 20px 0px 0px;
+    border-top-right-radius: 28px;
+    border-top-left-radius: 28px;
+    overflow: hidden;
+    background-color: #343434;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  span {
+    padding: 40px 34px 68px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      color: #fff;
+      font-size: 25px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    p {
+      width: 100% !important;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 24px;
+    }
+  }
+`;

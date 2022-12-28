@@ -20,8 +20,11 @@ export default function Home() {
     { nome: "Postgresql", src: "/icons/postgresql-original.svg" },
   ];
   const dataHabilidades = [
-    { nome: "MindBooster", src: "/projetos/MindBooster.png" },
-
+    {
+      nome: "MindBooster",
+      text: "MindBooster é um jogo de memorizar podendo ser utilizar diferentes tipos de assuntos.",
+      src: "/projetos/MindBooster.png",
+    },
   ];
   useEffect(() => {
     Aos.init({ duration: 1500 });
@@ -72,11 +75,7 @@ export default function Home() {
         <styles.Sobre data-aos="fade-up">
           <h1>Olá, eu sou o </h1>
           <h1 id="nome-dev">Renan Steiger </h1>
-          <p>Desenvolvedor Front-End</p>
-          <div>
-            <styles.ButtonCv>Currículo</styles.ButtonCv>
-            <styles.ButtonContato>Entar em contato</styles.ButtonContato>
-          </div>
+          <p>Desenvolvedor Web</p>
         </styles.Sobre>
         <styles.Resumo>
           <h1 id="title-section">Sobre mim</h1>
@@ -113,13 +112,19 @@ export default function Home() {
             {dataHabilidades.map((valor) => (
               <>
                 <styles.CardsProjetos key={valor.nome}>
-                  <h1>{valor.nome}</h1>
-                  <Image
-                    src={valor.src}
-                    alt="Picture of the author"
-                    width={280}
-                    height={180}
-                  />
+                  <div>
+                    <Image
+                      src={valor.src}
+                      alt="Picture of the author"
+                      width={234}
+                      height={124}
+                    />
+                  </div>
+                  <span>
+                    <h1>{valor.nome}</h1>
+                    <p>{valor.text}</p>
+                    <a href="https://github.com/steiger30/MindBooster" target="_blank" >Ver projeto</a>
+                  </span>
                 </styles.CardsProjetos>
               </>
             ))}
