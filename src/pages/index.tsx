@@ -123,7 +123,7 @@ export default function Home() {
                   <span>
                     <h1>{valor.nome}</h1>
                     <p>{valor.text}</p>
-                    <a href="https://github.com/steiger30/MindBooster" target="_blank" >Ver projeto</a>
+                    <Link href="https://github.com/steiger30/MindBooster">Ver projeto</Link>
                   </span>
                 </styles.CardsProjetos>
               </>
