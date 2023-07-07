@@ -1,0 +1,28 @@
+p, li{
+  font-family: 'Oswald', sans-serif;
+}
+
+li{
+  text-transform: capitalize;
+}
+a{
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  position: relative;
+  transition: all 0.3s ease;
+}
+a:hover::before {
+  right: 0;
+  left: 0;
+}
+a::before{
+  content: "";
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+  right: 50%;
+  left: 50%;
+  bottom: 0;
+  height: 2px;
+  background:#f5cf27 ;
+}

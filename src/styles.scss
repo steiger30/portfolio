@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+
+body {
+  background: #0b0a0a;
+  color: #ffffff;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Oswald', sans-serif;
+}
+
+.btn {
+  border: 1px solid #f5cf27;
+  padding: 4px 10px 5px 10px;
+  border-radius: 5px;
+  color: #f5cf27;
+  font-family: 'Oswald', sans-serif;
+
+}
