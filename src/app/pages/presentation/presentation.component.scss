@@ -1,0 +1,65 @@
+section {
+  min-height: 544px;
+}
+
+.tag {
+  span {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #6d6d6d;
+  }
+
+  span:not(:last-child)::after {
+    content: "|";
+    text-align: center;
+    display: inline-block;
+    padding: 0 8px 0 14px;
+    color: #6d6d6d;
+  }
+}
+
+a {
+  border: 1px solid #3a3a3a;
+  padding: 10px;
+  border-radius: 50px;
+
+  img {
+    width: 18px;
+  }
+}
+
+a:hover {
+  border-color: #6d6d6d;
+}
+
+
+.skills {
+  border-radius: 15px;
+
+  div{
+    padding: 20px;
+    text-align: center;
+    // border: 1px solid #8f8f8f41;
+    width: 250px;
+
+    div {
+      background: #f5cf27;
+      img {
+        width: 70px;
+      }
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin-bottom: 25px;
+    }
+
+    ul {
+      li {
+        padding: 5px;
+        text-align: center;
+
+      }
+    }
+  }
+}
