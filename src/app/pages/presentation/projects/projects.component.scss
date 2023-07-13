@@ -5,6 +5,14 @@
   box-shadow: 1px 0px 5px 4px #252424;
 }
 
+@media (max-width: 450px) {
+  .card {
+    width: 272px;
+    height: 580px;
+  }
+}
+
+
 h1 {
   font-size: 1.5rem;
 }

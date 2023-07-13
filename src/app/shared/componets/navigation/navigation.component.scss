@@ -1,7 +1,14 @@
 @media screen and (min-width:600px) {
-.navigation{
-  display: none;
-}
+  .navigation {
+    display: none;
+  }
+
+  .navigation-web {
+    // position: fixed;
+    // z-index: 1000;
+    // width: 100%;
+  }
+
   p,
   li {
     font-family: 'Oswald', sans-serif;
@@ -38,9 +45,9 @@
 
 
 @media screen and (max-width:600px) {
-.navigation-web{
-  display: none;
-}
+  .navigation-web {
+    display: none;
+  }
 
   nav {
     position: absolute;

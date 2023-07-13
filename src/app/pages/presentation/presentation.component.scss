@@ -40,8 +40,13 @@ a:hover {
   div {
     padding: 20px;
     text-align: center;
-    // border: 1px solid #8f8f8f41;
     width: 250px;
+
+    @media (max-width: 539px) {
+
+      width: 132px;
+
+    }
 
     div {
       background: #f5cf27;
@@ -91,6 +96,6 @@ input:focus {
 }
 
 
-.sm{
+.sm {
   max-width: 640px !important;
 }
