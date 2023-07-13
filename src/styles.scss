@@ -4,14 +4,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
 
+
+*{
+  font-family: 'Oswald', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: #0b0a0a;
   color: #ffffff;
 }
 
-*{
-  font-family: 'Oswald', sans-serif;
-}
+
 
 .btn {
   border: 1px solid #f5cf27;

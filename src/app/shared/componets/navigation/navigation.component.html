@@ -1,19 +1,37 @@
-<div class="flex justify-between items-center h-20">
+<div class="flex navigation-web justify-between items-center h-20">
   <p>
     renansteiger@live.com
   </p>
   <ul class="flex p-3">
     <li class="">
-      <a href="#">home</a>
+      <a href="">home</a>
     </li>
     <li class="ml-5">
-      <a href="#">projetos</a>
+      <a href="#projetos">projetos</a>
     </li>
     <li class="ml-5">
-      <a href="#">contato</a>
+      <a href="#contatos">contatos</a>
     </li>
   </ul>
-  <button class="btn">
-    Contate me
+</div>
+<div class=" navigation">
+  <button (click)="show()" class="hamburger">
+    <div id="bar1" class="bar"></div>
+    <div id="bar2" class="bar"></div>
+    <div id="bar3" class="bar"></div>
   </button>
+  <nav>
+
+    <ul>
+      <li>
+        <a href="">home</a>
+      </li>
+      <li>
+        <a href="#projetos">projetos</a>
+      </li>
+      <li>
+        <a href="#contatos">contatos</a>
+      </li>
+    </ul>
+  </nav>
 </div>

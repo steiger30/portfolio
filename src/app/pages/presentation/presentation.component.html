@@ -106,14 +106,15 @@
   </div>
 </section>
 
-<section class="flex flex-col items-center">
+<section id="projetos" class="flex flex-col items-center">
   <h1 class="text-3xl tracking-wider mb-9 ">Projetos</h1>
 
   <div class="flex flex-wrap justify-center gap-6  mt-9 ">
     <app-projects *ngFor="let project of projects " [project]="project" />
   </div>
 </section>
-<section class="flex flex-col items-center">
+
+<section id="contatos" class="flex flex-col items-center">
   <h1 class="text-3xl mb-5">Contato</h1>
   <p class="text-center w-3/5 mt-5 mb-4">Preencha o formulário abaixo para esclarermos suas dúvidas.</p>
   <div class=" container sm flex flex-wrap justify-center gap-6  mt-9 ">

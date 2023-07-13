@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class NavigationComponent {
 
+  show(){
+    document.querySelector('.hamburger')?.classList.toggle('open')
+    document.querySelector('.navigation')?.classList.toggle('active')
+  }
 }

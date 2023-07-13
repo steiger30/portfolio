@@ -1,28 +1,119 @@
-p, li{
-  font-family: 'Oswald', sans-serif;
+@media screen and (min-width:600px) {
+.navigation{
+  display: none;
+}
+  p,
+  li {
+    font-family: 'Oswald', sans-serif;
+  }
+
+  li {
+    text-transform: capitalize;
+  }
+
+  a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  a:hover::before {
+    right: 0;
+    left: 0;
+  }
+
+  a::before {
+    content: "";
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    bottom: 0;
+    height: 2px;
+    background: #f5cf27;
+  }
 }
 
-li{
-  text-transform: capitalize;
+
+@media screen and (max-width:600px) {
+.navigation-web{
+  display: none;
 }
-a{
-  text-decoration: none;
-  text-align: center;
-  display: block;
-  position: relative;
-  transition: all 0.3s ease;
-}
-a:hover::before {
-  right: 0;
-  left: 0;
-}
-a::before{
-  content: "";
-  transition: all 0.4s ease-in-out;
-  position: absolute;
-  right: 50%;
-  left: 50%;
-  bottom: 0;
-  height: 2px;
-  background:#f5cf27 ;
+
+  nav {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    width: 250px;
+  }
+
+  .navigation {
+    position: fixed;
+    z-index: 1000;
+
+    width: 350px;
+    right: -500px;
+    height: 100%;
+    background-color: aliceblue;
+    transition: .5s;
+
+    li {
+      text-transform: uppercase;
+      padding: 20px 30px;
+      border-bottom: 1px solid #8f8f8f;
+    }
+  }
+
+  .hamburger,
+  .bar {
+    position: fixed;
+
+  }
+
+  .hamburger {
+    display: block;
+    top: 5%;
+    left: 90vw;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    border: 0;
+    background: 0 0;
+    margin-right: 10px;
+  }
+
+  .bar {
+    top: 3px;
+    background: #8f8f8f;
+    width: 100%;
+    height: 4px;
+    transform: all;
+    transition: all .3s ease-in;
+  }
+
+  #bar2 {
+    top: 11px;
+  }
+
+  #bar3 {
+    top: 19px;
+  }
+
+  .navigation.active {
+    right: 0;
+  }
+
+  .hamburger.open #bar1 {
+    transform: rotate(45deg) translate(6px, 5px);
+  }
+
+  .hamburger.open #bar2 {
+    background-color: transparent;
+  }
+
+  .hamburger.open #bar3 {
+    transform: rotate(-45deg) translate(6px, -5px);
+  }
 }
