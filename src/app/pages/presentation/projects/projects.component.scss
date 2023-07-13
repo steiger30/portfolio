@@ -1,0 +1,46 @@
+.card {
+  width: 320px;
+  height: 530px;
+  border-radius: 1rem;
+  box-shadow: 1px 0px 5px 4px #252424;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.container-text {
+  height: calc(100% - 145px);
+  width: 100%;
+}
+
+.container-img {
+  height: 145px;
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(180deg, rgb(0, 0, 0) 2%, rgb(8, 8, 8) -13%, rgba(6, 6, 6, 0) 91%)
+}
+
+
+img {
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  filter: brightness(0.9) blur(0.6px);
+
+
+}
+
+small {
+  margin: 5px;
+  background: #f5cf270e;
+  color: #f5cf27b4;
+  padding: 5px 15px 5px 15px;
+  border-radius: 15px;
+}

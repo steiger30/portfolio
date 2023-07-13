@@ -1,5 +1,6 @@
 section {
-  min-height: 544px;
+  min-height: 444px;
+  margin-bottom: 100px;
 }
 
 .tag {
@@ -36,7 +37,7 @@ a:hover {
 .skills {
   border-radius: 15px;
 
-  div{
+  div {
     padding: 20px;
     text-align: center;
     // border: 1px solid #8f8f8f41;
@@ -44,6 +45,7 @@ a:hover {
 
     div {
       background: #f5cf27;
+
       img {
         width: 70px;
       }
@@ -62,4 +64,33 @@ a:hover {
       }
     }
   }
+}
+
+input,
+textarea {
+  width: 100%;
+  background: transparent;
+  height: 50px;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+textarea:valid,
+textarea:focus {
+  border-color: #f5cf27;
+  transition: 1s;
+}
+
+input:valid,
+input:focus {
+  border-color: #f5cf27;
+  transition: 1s;
+}
+
+
+.sm{
+  max-width: 640px !important;
 }

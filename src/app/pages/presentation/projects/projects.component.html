@@ -1,1 +1,15 @@
-<p>projects works!</p>
+<div class="card rounded  flex  justify-center items-center flex-col ">
+  <div class="container-img">
+    <img [src]="project.img" [alt]="project.name">
+  </div>
+  <div class=" container-text flex p-6 justify-between items-center flex-col gap-3">
+
+    <h1>{{project.name}}</h1>
+    <p class="text-center mt-3">{{project.describe}}</p>
+    <div class="flex flex-wrap  justify-center">
+      <small *ngFor="let technologies of project.technologies  "
+        aria-label="Technologies used:">{{technologies}}</small>
+    </div>
+    <a class="btn  " [href]="project.github" target="_blank" rel="noopener noreferrer">Acessar repositório</a>
+  </div>
+</div>

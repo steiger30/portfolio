@@ -9,12 +9,7 @@ body {
   color: #ffffff;
 }
 
-h1,
-h2,
-h3,
-p,
-li,
-a {
+*{
   font-family: 'Oswald', sans-serif;
 }
 
@@ -28,7 +23,7 @@ a {
 }
 
 
-p, span, li {
+p, span, li, input, textarea {
   color: #8f8f8f;
   font-size: 1.185rem;
 }

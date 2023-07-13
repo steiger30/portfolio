@@ -106,8 +106,42 @@
   </div>
 </section>
 
-<section>
-  <h1>Projetos</h1>
+<section class="flex flex-col items-center">
+  <h1 class="text-3xl tracking-wider mb-9 ">Projetos</h1>
+
+  <div class="flex flex-wrap justify-center gap-6  mt-9 ">
+    <app-projects *ngFor="let project of projects " [project]="project" />
+  </div>
+</section>
+<section class="flex flex-col items-center">
+  <h1 class="text-3xl mb-5">Contato</h1>
+  <p class="text-center w-3/5 mt-5 mb-4">Preencha o formulário abaixo para esclarermos suas dúvidas.</p>
+  <div class=" container sm flex flex-wrap justify-center gap-6  mt-9 ">
+
+    <form [formGroup]="form" class="w-full" action="" (submit)="enviarEmail()" ngNativeValidate>
+
+      <div class="flex gap-5 flex-col">
+        <div>
+          <label>Nome *</label>
+          <input name="from_name" type="text" formControlName="from_name" minlength="5" autocomplete="off"
+            required>
+        </div>
+        <div>
+          <label>Email *</label>
+          <input name="email" type="email" formControlName="email" autocomplete="off" minlength="5" required>
+        </div>
+        <div>
+          <label>Assunto *</label>
+          <input name="subject" type="text" formControlName="subject" autocomplete="off" minlength="5" required>
+        </div>
+        <div>
+          <label>Sua Mensagem *</label>
+          <textarea class="mt-3" name="message" type="text" formControlName="message" minlength="10" required></textarea>
+        </div>
+      </div>
+      <button class="btn mt-6" type="submit">Enviar</button>
+    </form>
+  </div>
 </section>
 
 <app-footer></app-footer>
